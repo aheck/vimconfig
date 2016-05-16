@@ -1,0 +1,1 @@
+/home/ahe/projects/cde/editorsupport/vim/plugin/javaimports.vim
