@@ -10,6 +10,8 @@ set bs=2 		" allow backspacing over everything in insert mode
 " Now we set some defaults for the editor 
 "set autoindent		" always set autoindenting on
 
+let mapleader=","
+
 set encoding=utf-8
 set autoread
 set visualbell
@@ -132,3 +134,13 @@ map <F10> :NERDTreeToggle<RETURN>
 map <F12> :TlistToggle<RETURN>
 
 execute pathogen#infect()
+
+let g:go_fmt_command = "goimports"
+let g:go_fmt_autosave = 1
+let g:go_auto_type_info = 1
+
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>r <Plug>(go-run)
+
+" disable folding
+set nofoldenable
